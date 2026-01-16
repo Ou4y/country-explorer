@@ -27,6 +27,11 @@ function createCountryCard(country) {
     article.appendChild(img);
     article.appendChild(nameHeading);
     article.appendChild(meta);
+    article.addEventListener('click', () => {
+        const commonName=country.name.common;
+        const encodedName=encodeURIComponent(commonName);
+        window.location.href=`country.html?name=${encodedName}`;
+    });
     return article;
 }
 
@@ -52,16 +57,6 @@ function getFilteredCountries(){
   });
 }
 
-function renderCountries() {
-  const countriesToShow =getFilteredCountries();
-
-  countriesGrid.innerHTML = ''; // clear previous cards
-
-  countriesToShow.slice(0,initalCountriesNum).forEach(country => {
-    const card = createCountryCard(country);
-    countriesGrid.appendChild(card);
-  });
-}
 // Create the Show Less button once
 const paginationDiv = document.querySelector('.pagination');
 const showLess = document.createElement('button');
