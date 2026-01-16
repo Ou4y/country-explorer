@@ -1,0 +1,108 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    padding: 16px 32px; 
+}
+header figure {
+   margin: 0;
+}
+#world-map {
+    width: auto;
+    height: 60px;
+}
+header h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    margin-left: 10px;
+}
+.page{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px;
+}
+.search-section {
+    margin-bottom: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 32px;
+    align-items: flex-start;
+}
+.search-section input,
+.search-section select {
+    padding: 6px 8px;
+    font-size: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-width: 180px;
+}
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 220px; 
+}
+.filter-group label {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+}
+.population-hint {
+    margin-top: 4px;
+    font-size: 0.7rem;
+    color: #666;
+    padding-left: 2px;
+}
+.countries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+.country-card{
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    max-width: 500px;
+}
+.country-flag{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 12px;
+    background-color: #b3b3b3;
+}
+.country-name{
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+}
+.country-meta{
+    font-size: 0.85rem;
+    margin:0;
+    line-height: 1.4;
+}
+.pagination{
+    margin-top: 24px;
+    text-align: center;
+}
+.show-more{
+    padding: 10px 24px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.show-more:hover{
+    box-shadow: black 0px 0px 10px;
+    transition: all 0.2s ease-in-out;
+}

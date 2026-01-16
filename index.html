@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <figure>
+        <img src="/assets/world.png" alt="Image of a world map" id="world-map">
+    </figure>
+    <h1>Country Explorer</h1>
+</header>
+<main class="page">
+    <section class="search-section">
+
+
+        <div class="filter-group">
+            <label for="search-name">Search by name:</label>
+            <input type="text" name="search-name" id="search-name" placeholder="Enter country name...">
+        </div>
+
+
+        <div class="filter-group">
+            <label for="region-select">Select a region:</label>
+            <select name="region-select" id="region-select">
+                <option value="all">All Regions</option>
+                <option value="Africa">Africa</option>
+                <option value="Americas">Americas</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Oceania">Oceania</option>
+            </select>
+        </div>
+
+
+        <div class="filter-group">
+            <label for="population-input">Search by population size:</label>
+            <input type="number" name="population-input" id="population-input" placeholder="Enter population size..." min="0" max="1500000000" step="1000000">
+            <p class="population-hint"> Max - 1.5 Billion (15000000000) </p>
+
+        </div>
+    </section>
+
+
+    <section class="countries-grid">
+        <!-- Country cards will be dynamically inserted here -->
+
+    </section>
+
+
+    <div class="pagination">
+        <button class="show-more">Show More</button>
+    </div>
+
+</main>
+
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
